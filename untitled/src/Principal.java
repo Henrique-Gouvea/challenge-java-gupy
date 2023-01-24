@@ -1,6 +1,7 @@
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Principal {
@@ -33,7 +34,13 @@ public class Principal {
     }
 
     public List<Funcionario> removeFuncionario(String funcionarioRemove){
-        System.out.println(funcionarioRemove);
+        Iterator<Funcionario> iterator = this.funcionarios.iterator();
+        while(iterator.hasNext()){
+            Funcionario funcionario = iterator.next();
+            if(funcionario.getNome().equals(funcionarioRemove)) {
+                iterator.remove();
+            }
+        }
         return this.funcionarios;
     }
 }
