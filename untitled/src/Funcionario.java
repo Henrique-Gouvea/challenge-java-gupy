@@ -19,5 +19,9 @@ public class Funcionario extends Pessoa{
     public String getFuncao() {
         return this.funcao;
     }
+
+    public void setSalario(BigDecimal newSalary) {
+        this.salario = newSalary;
+    }
 }
 

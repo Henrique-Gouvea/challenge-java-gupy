@@ -58,4 +58,15 @@ public class Principal {
             System.out.println("------------------------------------------");
         }
     }
+
+    public void salaryIncrease(Double percentIncrease){
+        Iterator<Funcionario> iterator = this.employess.iterator();
+        Double percent = percentIncrease/100.0;
+        while(iterator.hasNext()){
+            Funcionario funcionario = iterator.next();
+            Double salary = funcionario.getSalario().doubleValue();
+            Double newSalary = salary + (percent * salary);
+            funcionario.setSalario(new BigDecimal(newSalary));
+        }
+    }
 }

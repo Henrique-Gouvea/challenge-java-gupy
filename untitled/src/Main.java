@@ -9,5 +9,8 @@ public class Main {
         princ.printEmployess();
         princ.removeEmploye("Joao");
         princ.printEmployess();
+        princ.salaryIncrease(10.0);
+        princ.printEmployess();
+
     }
 }
