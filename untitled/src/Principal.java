@@ -43,4 +43,17 @@ public class Principal {
         }
         return this.funcionarios;
     }
+
+    public void imprimeFuncionarios(){
+        Iterator<Funcionario> iterator = this.funcionarios.iterator();
+        System.out.println("---------------Funcionarios---------------");
+        while(iterator.hasNext()){
+            Funcionario funcionario = iterator.next();
+            System.out.println("Nome: " + funcionario.getNome());
+            System.out.println("Data Nascimento: " + funcionario.getDataNascimento());
+            System.out.println("Salario: " + funcionario.getSalario());
+            System.out.println("Funcao: " + funcionario.getFuncao());
+            System.out.println("------------------------------------------");
+        }
+    }
 }
