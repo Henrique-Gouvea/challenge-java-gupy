@@ -1,8 +1,6 @@
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Principal {
     private List<Funcionario> employess;
@@ -97,5 +95,19 @@ public class Principal {
         }
         System.out.println("Nome: " + olderEmployee.getName());
         System.out.println("Idade: " + helpers.calculateAge(olderEmployee.getBirthDate()));
+    }
+
+    public SortedSet<String> printEmployessOrderAlphabetic(){
+        Iterator<Funcionario> iterator = this.employess.iterator();
+        System.out.println("----------Lista funcionarios ordem alfabetica----------");
+
+        SortedSet<String> orderEmployees = new TreeSet<String>();
+
+        while(iterator.hasNext()){
+            Funcionario employee = iterator.next();
+            orderEmployees.add(employee.getName());
+        }
+        System.out.println(orderEmployees);
+        return orderEmployees;
     }
 }

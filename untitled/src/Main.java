@@ -14,5 +14,6 @@ public class Main {
         princ.printEmployessBirthMonth(10);
         princ.printEmployessBirthMonth(12);
         princ.printEmployeOlder();
+        princ.printEmployessOrderAlphabetic();
     }
 }
