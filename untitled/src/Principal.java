@@ -69,4 +69,17 @@ public class Principal {
             funcionario.setSalary(new BigDecimal(newSalary));
         }
     }
+
+    public void printEmployessBirthMonth(Number monthNumberSearch){
+        Iterator<Funcionario> iterator = this.employess.iterator();
+        System.out.println("----------Aniversariantes mês:"+monthNumberSearch+ "----------");
+
+        while(iterator.hasNext()){
+            Funcionario funcionario = iterator.next();
+            Number monthNumber = funcionario.getBirthDate().getMonthValue();
+            if(monthNumber.equals(monthNumberSearch)) {
+                System.out.println(funcionario.getName());
+            }
+        }
+    }
 }

@@ -11,6 +11,7 @@ public class Main {
         princ.printEmployess();
         princ.salaryIncrease(10.0);
         princ.printEmployess();
-
+        princ.printEmployessBirthMonth(10);
+        princ.printEmployessBirthMonth(12);
     }
 }
