@@ -6,10 +6,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Principal princ = new Principal();
-        princ.imprimeFuncionarios();
-        princ.removeFuncionario("Joao");
-        princ.imprimeFuncionarios();
-
-
+        princ.printEmployess();
+        princ.removeEmploye("Joao");
+        princ.printEmployess();
     }
 }
