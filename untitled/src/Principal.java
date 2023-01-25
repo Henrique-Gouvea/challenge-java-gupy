@@ -53,7 +53,7 @@ public class Principal {
             Funcionario funcionario = iterator.next();
             System.out.println("Nome: " + funcionario.getNome());
             System.out.println("Data Nascimento: " + helpers.convertDataFormatBR(funcionario.getDataNascimento()));
-            System.out.println("Salario: " + funcionario.getSalario());
+            System.out.println("Salario: " + helpers.convertNumberForSalaryBr(funcionario.getSalario()));
             System.out.println("Funcao: " + funcionario.getFuncao());
             System.out.println("------------------------------------------");
         }
