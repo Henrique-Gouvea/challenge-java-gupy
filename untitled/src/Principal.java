@@ -30,7 +30,7 @@ public class Principal {
         this.employess.add(func9);
         this.employess.add(func10);
     }
-    public List<Funcionario> getFuncionarios(){
+    public List<Funcionario> getEmployess(){
         return this.employess;
     }
 
@@ -38,7 +38,7 @@ public class Principal {
         Iterator<Funcionario> iterator = this.employess.iterator();
         while(iterator.hasNext()){
             Funcionario funcionario = iterator.next();
-            if(funcionario.getNome().equals(funcionarioRemove)) {
+            if(funcionario.getName().equals(funcionarioRemove)) {
                 iterator.remove();
             }
         }
@@ -51,10 +51,10 @@ public class Principal {
         System.out.println("---------------Funcionarios---------------");
         while(iterator.hasNext()){
             Funcionario funcionario = iterator.next();
-            System.out.println("Nome: " + funcionario.getNome());
-            System.out.println("Data Nascimento: " + helpers.convertDataFormatBR(funcionario.getDataNascimento()));
-            System.out.println("Salario: " + helpers.convertNumberForSalaryBr(funcionario.getSalario()));
-            System.out.println("Funcao: " + funcionario.getFuncao());
+            System.out.println("Nome: " + funcionario.getName());
+            System.out.println("Data Nascimento: " + helpers.convertDataFormatBR(funcionario.getBirthDate()));
+            System.out.println("Salario: " + helpers.convertNumberForSalaryBr(funcionario.getSalary()));
+            System.out.println("Funcao: " + funcionario.getOccupation());
             System.out.println("------------------------------------------");
         }
     }
@@ -64,9 +64,9 @@ public class Principal {
         Double percent = percentIncrease/100.0;
         while(iterator.hasNext()){
             Funcionario funcionario = iterator.next();
-            Double salary = funcionario.getSalario().doubleValue();
+            Double salary = funcionario.getSalary().doubleValue();
             Double newSalary = salary + (percent * salary);
-            funcionario.setSalario(new BigDecimal(newSalary));
+            funcionario.setSalary(new BigDecimal(newSalary));
         }
     }
 }

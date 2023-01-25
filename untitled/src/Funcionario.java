@@ -3,25 +3,25 @@ import java.time.LocalDate;
 
 public class Funcionario extends Pessoa{
 
-    private BigDecimal salario;
-    private String funcao;
+    private BigDecimal salary;
+    private String occupation;
 
-    public Funcionario(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
-        super(nome, dataNascimento);
-        this.salario = salario;
-        this.funcao = funcao;
+    public Funcionario(String name, LocalDate birthDate, BigDecimal salary, String occupation) {
+        super(name, birthDate);
+        this.salary = salary;
+        this.occupation = occupation;
     }
 
-    public BigDecimal getSalario() {
-        return this.salario;
+    public BigDecimal getSalary() {
+        return this.salary;
     }
 
-    public String getFuncao() {
-        return this.funcao;
+    public String getOccupation() {
+        return this.occupation;
     }
 
-    public void setSalario(BigDecimal newSalary) {
-        this.salario = newSalary;
+    public void setSalary(BigDecimal newSalary) {
+        this.salary = newSalary;
     }
 }
 

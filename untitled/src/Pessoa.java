@@ -1,19 +1,19 @@
 import java.time.LocalDate;
 
 abstract class Pessoa {
-    private String nome;
-    private LocalDate dataNascimento;
+    private String name;
+    private LocalDate birthDate;
 
-    public Pessoa(String nome, LocalDate dataNascimento) {
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
+    public Pessoa(String name, LocalDate birthDate) {
+        this.name = name;
+        this.birthDate = birthDate;
     }
 
-    public String getNome() {
-        return this.nome;
+    public String getName() {
+        return this.name;
     }
 
-    public LocalDate getDataNascimento() {
-        return this.dataNascimento;
+    public LocalDate getBirthDate() {
+        return this.birthDate;
     }
 }
