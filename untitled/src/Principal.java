@@ -91,11 +91,11 @@ public class Principal {
 
         while(iterator.hasNext()){
             Funcionario employee = iterator.next();
-            if(employee.getBirthDate().isAfter(olderEmployee.getBirthDate())) {
+            if(employee.getBirthDate().isBefore(olderEmployee.getBirthDate())) {
                 olderEmployee = employee;
             }
         }
         System.out.println("Nome: " + olderEmployee.getName());
-        System.out.println("Idade: " + olderEmployee.getBirthDate());
+        System.out.println("Idade: " + helpers.calculateAge(olderEmployee.getBirthDate()));
     }
 }

@@ -17,9 +17,9 @@ public class Helpers {
         return salaryFormated;
     }
 
-    public Period calculateAge(LocalDate birthDate){
+    public Integer calculateAge(LocalDate birthDate){
         LocalDate nowDate = LocalDate.now();
         Period age = Period.between(birthDate, nowDate);
-        return age;
+        return age.getYears();
     }
 }
