@@ -110,4 +110,15 @@ public class Principal {
         System.out.println(orderEmployees);
         return orderEmployees;
     }
+
+    public void totalSalary(){
+        Iterator<Funcionario> iterator = this.employess.iterator();
+        BigDecimal totalSalary = new BigDecimal(0);
+
+        while(iterator.hasNext()){
+            Funcionario employee = iterator.next();
+            totalSalary = totalSalary.add(employee.getSalary());
+        }
+        System.out.println("Salario total: " + helpers.convertNumberForSalaryBr(totalSalary));
+    }
 }
