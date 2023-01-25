@@ -121,4 +121,15 @@ public class Principal {
         }
         System.out.println("Salario total: " + helpers.convertNumberForSalaryBr(totalSalary));
     }
+
+    public void getQuantitySalaryMinForEmployee(BigDecimal minSalary){
+        Iterator<Funcionario> iterator = this.employess.iterator();
+        System.out.println("----------Salario minimo por funcionario----------");
+
+        while(iterator.hasNext()){
+            Funcionario employee = iterator.next();
+            System.out.println("Nome: " + employee.getName());
+            System.out.println("Salarios minimos:  " + helpers.calculateQuantityMinSalary(employee.getSalary(), minSalary));
+        }
+    }
 }

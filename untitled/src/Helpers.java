@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -21,5 +23,10 @@ public class Helpers {
         LocalDate nowDate = LocalDate.now();
         Period age = Period.between(birthDate, nowDate);
         return age.getYears();
+    }
+
+    public BigDecimal calculateQuantityMinSalary(BigDecimal salary, BigDecimal minSalary){
+        BigDecimal quantitySalary = salary.divide(minSalary, 2, RoundingMode.HALF_EVEN);
+        return quantitySalary;
     }
 }

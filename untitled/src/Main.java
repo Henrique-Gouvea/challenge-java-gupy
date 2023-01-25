@@ -1,7 +1,4 @@
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,5 +13,6 @@ public class Main {
         princ.printEmployeOlder();
         princ.printEmployessOrderAlphabetic();
         princ.totalSalary();
+        princ.getQuantitySalaryMinForEmployee(new BigDecimal(1212));
     }
 }
