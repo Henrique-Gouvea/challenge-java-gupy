@@ -32,13 +32,16 @@ public class Helpers {
 
     public Map groupEmployessForOcupatio(){
         Iterator<Funcionario> iterator = new Principal().getEmployess().iterator();
-        Map<String, List<Funcionario>> employessForOccupation = new HashMap<>();
+        Map<String, List<String>> employessForOccupation = new HashMap<>();
         while (iterator.hasNext()){
-            String occupation = iterator.next().getOccupation();
+            Funcionario employee = iterator.next();
+            String occupation = employee.getOccupation();
+            String name = employee.getName();
+
             if(!employessForOccupation.containsKey(occupation)){
                 employessForOccupation.put(occupation,new ArrayList<>());
             }
-            employessForOccupation.get(occupation).add(iterator.next());
+            employessForOccupation.get(occupation).add(name);
         }
         return employessForOccupation;
     }

@@ -135,7 +135,7 @@ public class Principal {
 
     public void printEmployessForOcupatio(){
         System.out.println("----------Funcionarios por função----------");
-        Map<String, List<Funcionario>> employessForOccupation = helpers.groupEmployessForOcupatio();
+        Map<String, List<String>> employessForOccupation = helpers.groupEmployessForOcupatio();
         System.out.println(employessForOccupation);
     }
 }
