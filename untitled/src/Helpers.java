@@ -1,10 +1,10 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class Helpers {
 
@@ -28,5 +28,18 @@ public class Helpers {
     public BigDecimal calculateQuantityMinSalary(BigDecimal salary, BigDecimal minSalary){
         BigDecimal quantitySalary = salary.divide(minSalary, 2, RoundingMode.HALF_EVEN);
         return quantitySalary;
+    }
+
+    public Map groupEmployessForOcupatio(){
+        Iterator<Funcionario> iterator = new Principal().getEmployess().iterator();
+        Map<String, List<Funcionario>> employessForOccupation = new HashMap<>();
+        while (iterator.hasNext()){
+            String occupation = iterator.next().getOccupation();
+            if(!employessForOccupation.containsKey(occupation)){
+                employessForOccupation.put(occupation,new ArrayList<>());
+            }
+            employessForOccupation.get(occupation).add(iterator.next());
+        }
+        return employessForOccupation;
     }
 }

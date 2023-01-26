@@ -14,5 +14,6 @@ public class Main {
         princ.printEmployessOrderAlphabetic();
         princ.totalSalary();
         princ.getQuantitySalaryMinForEmployee(new BigDecimal(1212));
+        princ.printEmployessForOcupatio();
     }
 }

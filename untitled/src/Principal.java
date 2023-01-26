@@ -132,4 +132,10 @@ public class Principal {
             System.out.println("Salarios minimos:  " + helpers.calculateQuantityMinSalary(employee.getSalary(), minSalary));
         }
     }
+
+    public void printEmployessForOcupatio(){
+        System.out.println("----------Funcionarios por função----------");
+        Map<String, List<Funcionario>> employessForOccupation = helpers.groupEmployessForOcupatio();
+        System.out.println(employessForOccupation);
+    }
 }
